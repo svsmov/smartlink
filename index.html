@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>앱 설치로 이동 중...</title>
+  <script>
+    window.onload = function () {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.example.androidapp"; // ← 안드로이드 앱 링크
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/app/id1234567890"; // ← iOS 앱 링크
+      } else {
+        window.location.href = "https://yourwebsite.com"; // PC 등
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>앱스토어로 이동 중입니다...</p>
+</body>
+</html>
