@@ -3,16 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Redirecting to install Urban Lore...</title>
+
+  <!-- ✅ Open Graph meta tags for link preview -->
+  <meta property="og:title" content="Urban Lore - The Beat District" />
+  <meta property="og:description" content="Install Urban Lore now and enjoy the beats!" />
+  <meta property="og:image" content="https://svsmov.github.io/smartlink/urbanlore.png" />
+  <meta property="og:url" content="https://svsmov.github.io/smartlink/" />
+  <meta property="og:type" content="website" />
+
+  <!-- ✅ Twitter Card (optional, for better Twitter previews) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Urban Lore - The Beat District" />
+  <meta name="twitter:description" content="Install Urban Lore now and enjoy the beats!" />
+  <meta name="twitter:image" content="https://svsmov.github.io/smartlink/urbanlore.png" />
+
   <script>
     window.onload = function () {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       if (/android/i.test(userAgent)) {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.biginfive.urbanlore&pcampaignid=web_share"; // ← 안드로이드 앱 링크
+        // ✅ Android → Google Play
+        window.location.href = "https://play.google.com/store/apps/details?id=com.biginfive.urbanlore&pcampaignid=web_share";
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://apps.apple.com/us/app/urban-lore-the-beat-district/id6747655392"; // ← iOS 앱 링크
+        // ✅ iOS → App Store
+        window.location.href = "https://apps.apple.com/us/app/urban-lore-the-beat-district/id6747655392";
       } else {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.biginfive.urbanlore&pcampaignid=web_share"; // PC 등
+        // ✅ PC or others → Google Play (default)
+        window.location.href = "https://play.google.com/store/apps/details?id=com.biginfive.urbanlore&pcampaignid=web_share";
       }
     };
   </script>
