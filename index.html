@@ -4,31 +4,28 @@
   <meta charset="UTF-8">
   <title>Redirecting to install Urban Lore...</title>
 
-  <!-- ✅ Open Graph meta tags for link preview -->
+  <!-- ✅ Open Graph meta tags (카카오톡/디스코드/트위터 공통) -->
   <meta property="og:title" content="Urban Lore - The Beat District" />
   <meta property="og:description" content="Install Urban Lore now and enjoy the beats!" />
-  <meta property="og:image" content="https://svsmov.github.io/smartlink/urbanlore.png" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/svsmov/smartlink/main/urbanlore.png" />
   <meta property="og:url" content="https://svsmov.github.io/smartlink/" />
   <meta property="og:type" content="website" />
 
-  <!-- ✅ Twitter Card (optional, for better Twitter previews) -->
+  <!-- ✅ Twitter Card (optional) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Urban Lore - The Beat District" />
   <meta name="twitter:description" content="Install Urban Lore now and enjoy the beats!" />
-  <meta name="twitter:image" content="https://svsmov.github.io/smartlink/urbanlore.png" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/svsmov/smartlink/main/urbanlore.png" />
 
   <script>
     window.onload = function () {
       var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
       if (/android/i.test(userAgent)) {
-        // ✅ Android → Google Play
         window.location.href = "https://play.google.com/store/apps/details?id=com.biginfive.urbanlore&pcampaignid=web_share";
       } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        // ✅ iOS → App Store
         window.location.href = "https://apps.apple.com/us/app/urban-lore-the-beat-district/id6747655392";
       } else {
-        // ✅ PC or others → Google Play (default)
         window.location.href = "https://play.google.com/store/apps/details?id=com.biginfive.urbanlore&pcampaignid=web_share";
       }
     };
